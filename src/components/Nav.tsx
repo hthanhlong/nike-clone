@@ -2,8 +2,6 @@ import { headerLogo } from '../assets/images'
 import { navLinks } from '../constants'
 import { hamburger } from '../assets/icons'
 
-//max-lg:hidden = screens < 1024px -> that component was hidden
-
 const Nav = () => {
   return (
     <header className="padding-x absolute z-10 w-full py-8">

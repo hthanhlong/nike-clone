@@ -1,4 +1,4 @@
-import { Hero, Nav } from './components'
+import { Hero, Nav, PopularProducts } from './components'
 
 function App() {
   return (
@@ -6,6 +6,9 @@ function App() {
       <Nav />
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />
+      </section>
+      <section className="padding">
+        <PopularProducts />
       </section>
     </main>
   )
