@@ -25,7 +25,7 @@ const Nav = () => {
             <li key={item.label}>
               <a
                 href={item.href}
-                className="font-montserrat text-lg leading-normal text-slate-gray"
+                className="font-montserrat text-lg leading-normal text-slate-gray transition-all hover:text-coral-red"
               >
                 {item.label}
               </a>
@@ -37,7 +37,10 @@ const Nav = () => {
           <span>/</span>
           <a href="/">Explore now</a>
         </div>
-        <div onClick={() => setIsOpen(true)} className="hidden max-lg:block">
+        <div
+          onClick={() => setIsOpen(true)}
+          className="hidden cursor-pointer max-lg:block"
+        >
           <img src={hamburger} alt="hamburger icon" width={25} height={25} />
         </div>
       </nav>
