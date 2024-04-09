@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="max-container flex min-h-screen w-full flex-col justify-center gap-10 xl:flex-row"
+      className="max-container xl:padding-l wide:padding-r padding-b flex min-h-screen w-full flex-col justify-center gap-10 xl:flex-row"
     >
       <div className="max-xl:padding-x relative flex w-full flex-col items-start justify-center pt-28 xl:w-2/5">
         <p className="font-montserrat text-xl text-coral-red">
