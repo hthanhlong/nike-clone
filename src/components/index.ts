@@ -12,6 +12,9 @@ import Footer from './Footer'
 import Subscribe from './Subscribe'
 import SpecialOffer from './SpecialOffer'
 import CustomerReviews from './CustomerReviews'
+import MobileNav from './MobileNav'
+import NavList from './NavList'
+import IconClose from './IconClose'
 
 export {
   Nav,
@@ -28,4 +31,7 @@ export {
   Subscribe,
   SpecialOffer,
   CustomerReviews,
+  MobileNav,
+  NavList,
+  IconClose,
 }

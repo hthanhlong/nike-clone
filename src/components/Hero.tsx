@@ -17,7 +17,7 @@ const Hero = () => {
           Our Summer collections
         </p>
         <h1 className="mt-10 font-palanquin text-8xl font-bold max-sm:text-[72px] max-sm:leading-[82px]">
-          <span className="relative z-10 pr-10 xl:whitespace-nowrap xl:bg-white">
+          <span className="z-10 pr-10 xl:whitespace-nowrap xl:bg-white">
             The New Arrival
           </span>
           <br />
@@ -45,7 +45,7 @@ const Hero = () => {
           alt="shoe colletion"
           width={610}
           height={502}
-          className="relative z-10 object-contain"
+          className="object-contain"
         />
         <div className="absolute -bottom-[5%] flex gap-4 max-sm:px-6 sm:left-[10%] sm:gap-6">
           {shoes.map((image, index) => (

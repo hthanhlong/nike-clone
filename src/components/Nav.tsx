@@ -1,8 +1,13 @@
 import { headerLogo } from '../assets/images'
 import { navLinks } from '../constants'
 import { hamburger } from '../assets/icons'
+import MobileNav from './MobileNav'
+import { useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <header className="padding-x absolute z-10 w-full py-8">
       <nav className="max-container flex items-center justify-between">
@@ -32,10 +37,13 @@ const Nav = () => {
           <span>/</span>
           <a href="/">Explore now</a>
         </div>
-        <div className="hidden max-lg:block">
+        <div onClick={() => setIsOpen(true)} className="hidden max-lg:block">
           <img src={hamburger} alt="hamburger icon" width={25} height={25} />
         </div>
       </nav>
+      <AnimatePresence>
+        {isOpen && <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />}
+      </AnimatePresence>
     </header>
   )
 }
