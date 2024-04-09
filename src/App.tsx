@@ -1,3 +1,13 @@
-export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>
+import { Hero, Nav } from './components'
+
+function App() {
+  return (
+    <main className="relative">
+      <Nav />
+      <section className="xl:padding-l wide:padding-r padding-b">
+        <Hero />
+      </section>
+    </main>
+  )
 }
+export default App
