@@ -1,20 +1,21 @@
-import Nav from './Nav'
-import Hero from './Hero'
-import ShoeCard from './ShoeCard'
-import Button from './Button'
-import PopularProducts from './PopularProducts'
-import PopularProductCard from './PopularProductCard'
-import SuperQuality from './SuperQuality'
-import Services from './Services'
-import ServiceCard from './ServiceCard'
-import ReviewCard from './ReviewCard'
-import Footer from './Footer'
-import Subscribe from './Subscribe'
-import SpecialOffer from './SpecialOffer'
-import CustomerReviews from './CustomerReviews'
-import MobileNav from './MobileNav'
-import NavList from './NavList'
-import IconClose from './IconClose'
+import Nav from './Shared/Nav'
+import Hero from './UI/Hero'
+import ShoeCard from './Shared/ShoeCard'
+import Button from './UI/Button'
+import PopularProducts from './Shared/PopularProducts'
+import PopularProductCard from './Shared/PopularProductCard'
+import SuperQuality from './Shared/SuperQuality'
+import Services from './Shared/Services'
+import ServiceCard from './Shared/ServiceCard'
+import ReviewCard from './Shared/ReviewCard'
+import Footer from './UI/Footer'
+import Subscribe from './Shared/Subscribe'
+import SpecialOffer from './Shared/SpecialOffer'
+import CustomerReviews from './Shared/CustomerReviews'
+import MobileNav from './Shared/MobileNav'
+import NavList from './UI/NavList'
+import IconClose from './UI/IconClose'
+import SignInForm from './Shared/SignInForm'
 
 export {
   Nav,
@@ -34,4 +35,5 @@ export {
   MobileNav,
   NavList,
   IconClose,
+  SignInForm,
 }

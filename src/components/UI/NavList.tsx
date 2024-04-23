@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { navLinks } from '../constants'
+import { navLinks } from '../../constants'
 
 const NavList = () => {
   const navList = {

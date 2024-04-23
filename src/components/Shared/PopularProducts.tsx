@@ -1,5 +1,6 @@
-import { products } from '../constants'
-import { PopularProductCard } from '../components'
+import { products } from '../../constants'
+import { PopularProductCard } from '..'
+import { Link } from 'react-router-dom'
 
 const PopularProducts = () => {
   return (
@@ -15,7 +16,9 @@ const PopularProducts = () => {
       </div>
       <div className="mt-16 grid grid-cols-1 gap-14 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
-          <PopularProductCard key={product.name} {...product} />
+          <Link key={product.name} to={`/products/${product.id}`}>
+            <PopularProductCard key={product.name} {...product} />
+          </Link>
         ))}
       </div>
     </section>

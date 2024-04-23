@@ -1,27 +1,10 @@
-import {
-  Hero,
-  Nav,
-  PopularProducts,
-  SuperQuality,
-  Services,
-  SpecialOffer,
-  CustomerReviews,
-  Subscribe,
-  Footer,
-} from './components'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routers'
 
 function App() {
   return (
     <main className="relative">
-      <Nav />
-      <Hero />
-      <PopularProducts />
-      <SuperQuality />
-      <Services />
-      <SpecialOffer />
-      <CustomerReviews />
-      <Subscribe />
-      <Footer />
+      <RouterProvider router={router} />
     </main>
   )
 }

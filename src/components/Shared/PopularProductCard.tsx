@@ -1,4 +1,4 @@
-import { star } from '../assets/icons'
+import { star } from '../../assets/icons'
 
 const PopularProductCard = ({
   imgURL,
@@ -11,7 +11,11 @@ const PopularProductCard = ({
 }) => {
   return (
     <div className="flex w-full flex-1 flex-col max-sm:items-center max-sm:justify-center">
-      <img src={imgURL} alt={name} className="h-[282px] w-[282px]" />
+      <img
+        src={imgURL}
+        alt={name}
+        className="h-[282px] w-[282px] hover:scale-105"
+      />
       <div className="mt-8 flex justify-start gap-2.5">
         <img src={star} alt="rating icon" width={24} height={24} />
         <p className="font-montserrat text-xl leading-normal text-slate-gray">

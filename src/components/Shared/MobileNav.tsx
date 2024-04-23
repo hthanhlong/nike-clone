@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import NavList from './NavList'
-import IconClose from './IconClose'
+import NavList from '../UI/NavList'
+import IconClose from '../UI/IconClose'
 
 export const MobileNav = ({
   isOpen,
