@@ -1,23 +1,21 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Button, Label, TextInput } from 'flowbite-react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { signInSchema } from '../../shemas/signinShema'
-
-type Inputs = {
-  email: string
-  password: string
-}
+import { Link } from 'react-router-dom'
+import { signInSchema } from '../../shemas'
+import { SignInInput } from '../../types'
 
 function SignInForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Inputs>({
+  } = useForm<SignInInput>({
     resolver: yupResolver(signInSchema),
   })
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log('data', data)
+  const onSubmit: SubmitHandler<SignInInput> = (data) =>
+    console.log('data', data)
 
   return (
     <form
@@ -32,7 +30,7 @@ function SignInForm() {
           id="email1"
           type="email"
           placeholder="name@flowbite.com"
-          {...register('email')}
+          {...register('email', { required: true })}
           color={errors.email ? 'failure' : 'primary'}
           helperText={
             <>
@@ -48,7 +46,7 @@ function SignInForm() {
         <TextInput
           id="password1"
           type="password"
-          {...register('password')}
+          {...register('password', { required: true })}
           color={errors.password ? 'failure' : 'primary'}
           helperText={
             <>
@@ -58,6 +56,12 @@ function SignInForm() {
         />
       </div>
       <Button type="submit">Submit</Button>
+      <Link
+        to="/sign-up"
+        className="text-sky-600 hover:underline dark:text-sky-500"
+      >
+        Don't have an account? Sign up
+      </Link>
     </form>
   )
 }
