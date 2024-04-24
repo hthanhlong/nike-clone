@@ -1,10 +1,8 @@
 const ShoeCard = ({
-  key,
   imgURL,
   changeBigShoeImage,
   bigShoeImg,
 }: {
-  key: number
   imgURL: {
     thumbnail: string
     bigShoe: string
@@ -20,7 +18,6 @@ const ShoeCard = ({
 
   return (
     <div
-      key={key}
       className={`rounded-xl border-2 ${
         bigShoeImg === imgURL.bigShoe
           ? 'border-coral-red'
