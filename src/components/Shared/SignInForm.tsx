@@ -4,6 +4,8 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { signInSchema } from '../../shemas'
 import { SignInInput } from '../../types'
+import { useMutation } from '@tanstack/react-query'
+import Auth from '../../axios/auth'
 
 function SignInForm() {
   const {
@@ -14,8 +16,11 @@ function SignInForm() {
     resolver: yupResolver(signInSchema),
   })
 
-  const onSubmit: SubmitHandler<SignInInput> = (data) =>
-    console.log('data', data)
+  const { mutateAsync: signInFn } = useMutation({
+    mutationFn: (data: SignInInput) => Auth.signIn(data),
+  })
+
+  const onSubmit: SubmitHandler<SignInInput> = (data) => signInFn(data)
 
   return (
     <form

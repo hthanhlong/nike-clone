@@ -9,6 +9,7 @@ import { useMutation } from '@tanstack/react-query'
 import Auth from '../../axios/auth'
 
 function SignUpForm() {
+  const [isCanSubmit, setIsCanSubmit] = useState(false)
   const {
     getValues,
     register,
@@ -22,8 +23,6 @@ function SignUpForm() {
   const { mutateAsync: signUpFn } = useMutation({
     mutationFn: (data: SignUpInput) => Auth.signUp(data),
   })
-
-  const [isCanSubmit, setIsCanSubmit] = useState(false)
 
   const onSubmit: SubmitHandler<SignUpInput> = async (data) => {
     const { password, confirmPassword, agree } = data

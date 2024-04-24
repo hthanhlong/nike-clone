@@ -1,10 +1,9 @@
 import axios from 'axios'
 import { LOCAL_STORAGE_KEY } from '../constants'
-
-const HOST = import.meta.env.VITE_HOST || 'http://localhost:8080'
+import { HOST_ENDPOINT } from '../configENV'
 
 export const http = axios.create({
-  baseURL: `${HOST}/api/v1/`,
+  baseURL: `${HOST_ENDPOINT}/api/v1`,
 })
 
 http.interceptors.request.use(
