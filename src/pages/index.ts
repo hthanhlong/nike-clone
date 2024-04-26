@@ -11,6 +11,8 @@ import ErrorPage from './errorpage/ErrorPage'
 import ContractUs from './contractus/ContractUs'
 import AboutUs from './aboutus/AboutUs'
 import Cart from './cart/Cart'
+import Order from './order/Order'
+import Transaction from './transaction/Transaction'
 
 export {
   Home,
@@ -26,4 +28,6 @@ export {
   ContractUs,
   AboutUs,
   Cart,
+  Order,
+  Transaction,
 }

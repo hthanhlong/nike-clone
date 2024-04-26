@@ -2,14 +2,17 @@ import {
   AboutUs,
   Admin,
   Cart,
+  Checkout,
   ContractUs,
   ErrorPage,
   Home,
+  Order,
   Product,
   ProductDetail,
   Setting,
   SignIn,
   SignUp,
+  Transaction,
 } from '../pages'
 import { createBrowserRouter } from 'react-router-dom'
 import { ProtectedRoute } from './ProtectedRoute'
@@ -66,16 +69,16 @@ const routes = [
         element: <Setting />,
       },
       {
-        // path: '/checkout',
-        // element: <Settings />,
+        path: '/checkout',
+        element: <Checkout />,
       },
       {
-        // path: '/orders',
-        // element: <Settings />,
+        path: '/orders',
+        element: <Order />,
       },
       {
-        // path: '/transactions',
-        // element: <Settings />,
+        path: '/transactions',
+        element: <Transaction />,
       },
     ],
   },

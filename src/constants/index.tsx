@@ -24,8 +24,8 @@ import {
 
 export const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about-us', label: 'About Us' },
   { href: '/products', label: 'Products' },
+  { href: '/about-us', label: 'About Us' },
   { href: '/contact-us', label: 'Contact Us' },
 ]
 
@@ -74,6 +74,54 @@ export const products = [
     imgURL: shoe7,
     name: 'Nike Air Jordan-001',
     price: '$230.20',
+  },
+  {
+    id: 5,
+    imgURL: shoe4,
+    name: 'Nike Air Jordan-01',
+    price: '$200.20',
+  },
+  {
+    id: 6,
+    imgURL: shoe5,
+    name: 'Nike Air Jordan-10',
+    price: '$210.20',
+  },
+  {
+    id: 7,
+    imgURL: shoe6,
+    name: 'Nike Air Jordan-100',
+    price: '$220.20',
+  },
+  {
+    id: 8,
+    imgURL: shoe7,
+    name: 'Nike Air Jordan-001',
+    price: '$230.20',
+  },
+  {
+    id: 9,
+    imgURL: shoe7,
+    name: 'Nike Air Jordan-001',
+    price: '$230.20',
+  },
+  {
+    id: 10,
+    imgURL: shoe4,
+    name: 'Nike Air Jordan-01',
+    price: '$200.20',
+  },
+  {
+    id: 11,
+    imgURL: shoe5,
+    name: 'Nike Air Jordan-10',
+    price: '$210.20',
+  },
+  {
+    id: 12,
+    imgURL: shoe6,
+    name: 'Nike Air Jordan-100',
+    price: '$220.20',
   },
 ]
 

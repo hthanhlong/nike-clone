@@ -16,6 +16,7 @@ import MobileNav from './Shared/MobileNav'
 import NavList from './UI/NavList'
 import IconClose from './UI/IconClose'
 import SignInForm from './Shared/SignInForm'
+import CustomPagination from './Shared/CustomPagination'
 
 export {
   Nav,
@@ -36,4 +37,5 @@ export {
   NavList,
   IconClose,
   SignInForm,
+  CustomPagination,
 }
