@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { navLinks } from '../../constants'
 
@@ -50,7 +51,7 @@ const NavList = () => {
           variants={navItem}
           key={item.label}
         >
-          <a href={item.href}>{item.label}</a>
+          <Link to={item.href}>{item.label}</Link>
         </motion.li>
       ))}
     </motion.ul>

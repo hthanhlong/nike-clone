@@ -9,7 +9,6 @@ import Checkout from './checkout/Checkout'
 import Admin from './admin/Admin'
 import ErrorPage from './errorpage/ErrorPage'
 import ContractUs from './contractus/ContractUs'
-import AboutUs from './aboutus/AboutUs'
 import Cart from './cart/Cart'
 import Order from './order/Order'
 import Transaction from './transaction/Transaction'
@@ -26,7 +25,6 @@ export {
   Admin,
   ErrorPage,
   ContractUs,
-  AboutUs,
   Cart,
   Order,
   Transaction,

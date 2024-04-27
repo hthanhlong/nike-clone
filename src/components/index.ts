@@ -17,6 +17,9 @@ import NavList from './UI/NavList'
 import IconClose from './UI/IconClose'
 import SignInForm from './Shared/SignInForm'
 import CustomPagination from './Shared/CustomPagination'
+import RatingStars from './Shared/Rating'
+import Zoom from './Shared/Zoom'
+import SearchIcon from './UI/SearchIcon'
 
 export {
   Nav,
@@ -38,4 +41,7 @@ export {
   IconClose,
   SignInForm,
   CustomPagination,
+  RatingStars,
+  Zoom,
+  SearchIcon,
 }

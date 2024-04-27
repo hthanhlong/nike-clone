@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { copyrightSign } from '../../assets/icons'
 import { footerLogo } from '../../assets/images'
 import { footerLinks, socialMedia } from '../../constants'
@@ -7,7 +8,7 @@ const Footer = () => {
     <footer className="max-container padding-x padding-t w-full bg-black pb-8">
       <div className="flex flex-wrap items-start justify-between gap-20 max-lg:flex-col">
         <div className="flex flex-col items-start">
-          <a href="/">
+          <Link to="/">
             <img
               src={footerLogo}
               alt="logo"
@@ -15,7 +16,7 @@ const Footer = () => {
               height={46}
               className="m-0"
             />
-          </a>
+          </Link>
           <p className="mt-6 font-montserrat text-base leading-7 text-white-400 sm:max-w-sm">
             Get shoes ready for the new term at your nearest Nike store. Find
             Your perfect Size In Store. Get Rewards
@@ -44,7 +45,7 @@ const Footer = () => {
                     className="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
                     key={link.name}
                   >
-                    <a href={link.link}>{link.name}</a>
+                    <Link to={link.link}>{link.name}</Link>
                   </li>
                 ))}
               </ul>

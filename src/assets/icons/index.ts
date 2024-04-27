@@ -12,6 +12,7 @@ import truckFast from './truck-fast.svg'
 import twitter from './twitter.svg'
 import close from './close.svg'
 import search from './search.svg'
+import cart from './cart.svg'
 
 export {
   arrowRight,
@@ -28,4 +29,5 @@ export {
   twitter,
   close,
   search,
+  cart,
 }

@@ -1,5 +1,4 @@
 import {
-  AboutUs,
   Admin,
   Cart,
   Checkout,
@@ -50,10 +49,6 @@ const routes = [
       {
         path: '/contact-us',
         element: <ContractUs />,
-      },
-      {
-        path: '/about-us',
-        element: <AboutUs />,
       },
     ],
   },

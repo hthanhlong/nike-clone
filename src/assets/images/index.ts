@@ -21,6 +21,11 @@ import thumbnailShoe1 from './thumbnail-shoe1.svg'
 import thumbnailShoe2 from './thumbnail-shoe2.svg'
 import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
+import image1 from './image-1.jpeg'
+import image2 from './image-2.png'
+import image3 from './image-3.jpeg'
+import image4 from './image-4.png'
+
 export {
   bigShoe1,
   bigShoe2,
@@ -39,4 +44,8 @@ export {
   thumbnailShoe1,
   thumbnailShoe2,
   thumbnailShoe3,
+  image1,
+  image2,
+  image3,
+  image4,
 }

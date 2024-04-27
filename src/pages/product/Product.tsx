@@ -1,9 +1,7 @@
 import { products } from '../../constants'
 import { CustomPagination, PopularProductCard } from '../../components'
 import { Select, TextInput } from 'flowbite-react'
-import search from '../../assets/icons/search.svg'
-
-const SearchIcon = () => <img src={search} className="h-4 w-4" />
+import { SearchIcon } from '../../components'
 
 const Product = () => {
   return (
@@ -34,6 +32,8 @@ const Product = () => {
             imgURL={product.imgURL}
             name={product.name}
             price={product.price}
+            rating={product.rating}
+            reviews={product.reviews}
           />
         ))}
       </div>
