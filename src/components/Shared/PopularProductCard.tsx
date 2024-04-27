@@ -40,14 +40,14 @@ const PopularProductCard = ({
       <p className="mt-2 font-montserrat text-2xl font-semibold leading-normal text-coral-red">
         {price}
       </p>
-      <div className="mt-2 flex items-center justify-center gap-2">
-        <button className="mt-2 flex w-full items-center justify-center rounded-lg bg-coral-red px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-coral-red/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral-red">
-          <span className="font-montserrat text-lg leading-normal">
+      <div className="mt-2 flex flex-wrap items-center justify-center gap-2">
+        <button className="mt-2 flex w-full items-center justify-center rounded-lg bg-coral-red px-2 py-1 text-sm font-medium text-white shadow-sm hover:bg-coral-red/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral-red">
+          <span className="font-montserrat text-md leading-normal">
             Add to cart
           </span>
         </button>
-        <button className="mt-2 flex w-full items-center justify-center rounded-lg bg-coral-red px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-coral-red/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral-red">
-          <span className="font-montserrat text-lg leading-normal">
+        <button className="mt-2 flex w-full items-center justify-center rounded-lg bg-coral-red px-2 py-1 text-sm font-medium text-white shadow-sm hover:bg-coral-red/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral-red">
+          <span className="font-montserrat text-md leading-normal">
             Buy now
           </span>
         </button>

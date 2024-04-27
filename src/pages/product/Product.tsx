@@ -5,7 +5,7 @@ import { SearchIcon } from '../../components'
 
 const Product = () => {
   return (
-    <section>
+    <section className="px-10">
       <div className="flex justify-between">
         <form className="w-1/2">
           <TextInput

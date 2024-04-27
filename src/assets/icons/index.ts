@@ -13,6 +13,9 @@ import twitter from './twitter.svg'
 import close from './close.svg'
 import search from './search.svg'
 import cart from './cart.svg'
+import trash from './trash.svg'
+import heart from './heart.svg'
+import share from './share.svg'
 
 export {
   arrowRight,
@@ -30,4 +33,7 @@ export {
   close,
   search,
   cart,
+  trash,
+  heart,
+  share,
 }

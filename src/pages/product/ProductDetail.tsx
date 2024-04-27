@@ -33,8 +33,8 @@ const ProductDetail = () => {
   const [openModal, setOpenModal] = useState(false)
 
   return (
-    <div className="flex gap-12 px-10">
-      <div className="left w-1/3">
+    <div className="flex gap-12 px-10 py-4 max-lg:flex-col">
+      <div className="left w-1/3 max-lg:w-full">
         <Zoom height={500} width="100%" zoomScale={3} src={selectedImage} />
         <div className="my-2 text-center text-xs">
           Roll over image to zoom in
@@ -70,7 +70,7 @@ const ProductDetail = () => {
           ></img>
         </div>
       </div>
-      <div className="right w-2/3">
+      <div className="right w-2/3 max-lg:w-full">
         <h1 className="text-4xl font-bold">Nike Air Max Dn</h1>
         <p>Shoe</p>
         <p className="my-5 text-sm">$100</p>
