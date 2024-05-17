@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { navLinks } from '../../constants'
+import { navLinks } from '../../data/constants'
 
 const NavList = () => {
   const navList = {

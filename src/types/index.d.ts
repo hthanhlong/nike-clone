@@ -9,3 +9,5 @@ export interface SignUpInput {
   confirmPassword: string
   agree: boolean
 }
+
+

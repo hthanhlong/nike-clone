@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { copyrightSign } from '../../assets/icons'
 import { footerLogo } from '../../assets/images'
-import { footerLinks, socialMedia } from '../../constants'
+import { footerLinks, socialMedia } from '../../data/constants'
 
 const Footer = () => {
   return (

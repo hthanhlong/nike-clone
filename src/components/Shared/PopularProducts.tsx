@@ -1,4 +1,4 @@
-import { products } from '../../constants'
+import { products } from '../../data/constants'
 import { PopularProductCard } from '..'
 
 const PopularProducts = () => {

@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { LOCAL_STORAGE_KEY } from '../constants'
-import { HOST_ENDPOINT } from '../configENV'
+import { LOCAL_STORAGE_KEY } from '../data/constants'
+import { HOST_ENDPOINT } from '../data/configENV'
 
 export const http = axios.create({
   baseURL: `${HOST_ENDPOINT}/api/v1`,

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { shoes, statistics } from '../../constants'
+import { shoes, statistics } from '../../data/constants'
 import { Button, ShoeCard } from '..'
 import { bigShoe1 } from '../../assets/images'
 import { arrowRight } from '../../assets/icons'

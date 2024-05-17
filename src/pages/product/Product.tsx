@@ -1,4 +1,4 @@
-import { products } from '../../constants'
+import { products } from '../../data/constants'
 import { CustomPagination, PopularProductCard } from '../../components'
 import { Select, TextInput } from 'flowbite-react'
 import { SearchIcon } from '../../components'
