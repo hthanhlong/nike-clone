@@ -1,9 +1,13 @@
 import { Navigate, Outlet } from 'react-router-dom'
+import { useAuthContext } from '../hooks/useAuthContext'
 
 export const ProtectedRoute = () => {
-  const isLogged = false
-  const accessToken = false
-  if (!isLogged && !accessToken) {
+  const { authData } = useAuthContext()
+
+  const isLogged = !!authData.user
+  const accessToken = authData.accessToken
+
+  if (!isLogged || !accessToken) {
     return <Navigate to="/" />
   }
   return <Outlet />

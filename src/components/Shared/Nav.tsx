@@ -6,12 +6,14 @@ import { navLinks } from '../../data/constants'
 import { hamburger } from '../../assets/icons'
 import { cart } from '../../assets/icons'
 import MobileNav from './MobileNav'
+import { useAuthContext } from '../../hooks/useAuthContext'
+import useAuthentication from '../../features/authentication/hooks/useAuthentication'
 
 const Nav = () => {
   const { pathname } = useLocation()
-  console.log('pathname', pathname)
-
+  const { authData } = useAuthContext()
   const [isOpen, setIsOpen] = useState(false)
+  const { signOut } = useAuthentication()
 
   const contentNav = (pathname: string) => {
     if (pathname === '/sign-in') {
@@ -38,7 +40,11 @@ const Nav = () => {
           ))}
         </ul>
         <div className="flex gap-2 font-montserrat text-lg font-medium leading-normal max-lg:hidden">
-          <Link to="/sign-in">Sign in</Link>
+          {authData.user ? (
+            <span>{authData.user.email}</span>
+          ) : (
+            <Link to="/sign-in">Sign in</Link>
+          )}
           <div className="ml-10">
             <Link to="/cart">
               <img
@@ -50,6 +56,14 @@ const Nav = () => {
               />
             </Link>
           </div>
+          {authData.user && (
+            <button
+              onClick={signOut}
+              className="font-montserrat text-lg leading-normal text-slate-gray transition-all hover:text-coral-red"
+            >
+              sign out
+            </button>
+          )}
         </div>
         <div
           onClick={() => setIsOpen(true)}

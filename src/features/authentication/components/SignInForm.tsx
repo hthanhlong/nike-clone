@@ -1,30 +1,25 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Button, Label, TextInput } from 'flowbite-react'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
-import { signInSchema } from '../../shemas'
-import { SignInInput } from '../../types'
-import { useMutation } from '@tanstack/react-query'
-import Auth from '../../axios/auth'
+import { signInSchema } from '../validations'
+import { ISignIn } from '../types'
+import useAuthentication from '../hooks/useAuthentication'
 
 function SignInForm() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<SignInInput>({
+  } = useForm<ISignIn>({
     resolver: yupResolver(signInSchema),
   })
 
-  const { mutateAsync: signInFn } = useMutation({
-    mutationFn: (data: SignInInput) => Auth.signIn(data),
-  })
-
-  const onSubmit: SubmitHandler<SignInInput> = (data) => signInFn(data)
+  const { signInFn } = useAuthentication()
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit((data) => signInFn(data))}
       className="mx-auto flex max-w-md flex-col gap-4 rounded-lg bg-sky-200 p-4"
     >
       <div>

@@ -3,28 +3,29 @@ import { Button, Checkbox, Label, TextInput } from 'flowbite-react'
 import { Link } from 'react-router-dom'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { signUpSchema } from '../../shemas'
-import { SignUpInput } from '../../types'
+import { signUpSchema } from '../validations'
+import { ISignUp } from '../types'
 import { useMutation } from '@tanstack/react-query'
-import Auth from '../../axios/auth'
+import AuthService from '../services'
 
 function SignUpForm() {
   const [isCanSubmit, setIsCanSubmit] = useState(false)
+
   const {
     getValues,
     register,
     handleSubmit,
     setError,
     formState: { errors },
-  } = useForm<SignUpInput>({
+  } = useForm<ISignUp>({
     resolver: yupResolver(signUpSchema),
   })
 
   const { mutateAsync: signUpFn } = useMutation({
-    mutationFn: (data: SignUpInput) => Auth.signUp(data),
+    mutationFn: (data: ISignUp) => AuthService.signUp(data),
   })
 
-  const onSubmit: SubmitHandler<SignUpInput> = async (data) => {
+  const onSubmit: SubmitHandler<ISignUp> = async (data) => {
     const { password, confirmPassword, agree } = data
     if (password !== confirmPassword) {
       setError('confirmPassword', { message: 'Passwords do not match' })
