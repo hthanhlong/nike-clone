@@ -43,7 +43,11 @@ const Nav = () => {
           {authData.user ? (
             <span>{authData.user.email}</span>
           ) : (
-            <Link to="/sign-in">Sign in</Link>
+            <Link to="/sign-in">
+              <span className="font-montserrat text-lg leading-normal text-slate-gray transition-all hover:text-coral-red">
+                Sign in
+              </span>
+            </Link>
           )}
           <div className="ml-10">
             <Link to="/cart">
@@ -76,8 +80,8 @@ const Nav = () => {
   }
 
   return (
-    <header className="padding-x w-full py-8">
-      <nav className="max-container flex items-center justify-between">
+    <header className="max-container padding-x w-full py-8">
+      <nav className="flex items-center justify-between">
         <Link to="/">
           <img
             src={headerLogo}

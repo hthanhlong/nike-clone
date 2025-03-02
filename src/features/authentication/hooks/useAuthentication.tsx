@@ -14,10 +14,6 @@ const useAuthentication = () => {
 
   useEffect(() => {
     if (signInData) {
-      // set local storage
-      localStorage.setItem('accessToken', signInData.data.accessToken)
-      localStorage.setItem('refreshToken', signInData.data.refreshToken)
-      localStorage.setItem('user', JSON.stringify(signInData.data.user))
       setAuthData(signInData.data)
       nagivate('/')
     }

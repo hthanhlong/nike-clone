@@ -4,15 +4,19 @@ import { AuthData } from '../types'
 export const AuthContext = createContext({
   authData: {
     user: {
-        email: '',
-        firstName: '',
-        lastName: '',
+      email: '',
+      firstName: '',
+      lastName: '',
     },
     accessToken: null,
     refreshToken: null,
   },
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setAuthData: (data: AuthData) => {},
+  setAuthData: (authData: AuthData) => {
+    const { user, accessToken, refreshToken } = authData
+    localStorage.setItem('user', JSON.stringify(user))
+    localStorage.setItem('accessToken', accessToken as string)
+    localStorage.setItem('refreshToken', refreshToken as string)
+  },
 })
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
