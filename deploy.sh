@@ -13,4 +13,4 @@ docker rmi nike_clone
 docker build -t nike_clone .
 
 # run the container
-docker run -d --name nike_clone -p 80:80 nike_clone
+docker run -d --name nike_clone -p 8080:80 nike_clone
